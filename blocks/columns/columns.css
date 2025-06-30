@@ -1,3 +1,4 @@
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -30,4 +31,31 @@
     flex: 1;
     order: unset;
   }
+}
+
+.columns.columns9 {
+  background-color: #F8F9F6;
+  width: 100vw;
+  min-height: 260px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hide all block content */
+.columns.columns9 > div {
+  display: none;
+}
+
+/* Reset box model for all descendants just in case */
+.columns.columns9 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
 }
