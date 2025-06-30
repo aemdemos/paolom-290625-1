@@ -25,3 +25,132 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards.cards14 > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cards.cards14 > ul > li {
+  background: #fff;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 6px 24px 0 rgb(60 60 60 / 7%);
+  overflow: hidden;
+  width: 308px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards.cards14 .cards-card-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  background: #eee;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.cards.cards14 .cards-card-image img,
+.cards.cards14 .cards-card-image picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  display: block;
+}
+
+.cards.cards14 .cards-card-body p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.cards.cards14 .cards-card-body {
+  padding: 10px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+}
+
+.cards.cards14 .cards-card-body .pills-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.cards.cards14 .cards-card-body > p:nth-child(1),
+.cards.cards14 .cards-card-body > p:nth-child(2) {
+  display: inline-flex;
+  align-items: center;
+  background: #ececec;
+  border-radius: 999px;
+  padding: 6px 20px 5px;
+  font-size: 12px;
+  font-family: Montserrat, Poppins, Arial, sans-serif;
+  font-weight: 600;
+  color: #232323;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.15;
+  margin: 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.cards.cards14 .cards-card-body > p:nth-child(1) {
+  align-self: flex-start;
+  margin-right: 0;
+}
+
+.cards.cards14 .cards-card-body > p:nth-child(2) {
+  align-self: flex-end;
+  margin-left: 0;
+  margin-top: -32px;
+}
+
+.cards.cards14 .cards-card-body h3 {
+  font-family: Montserrat, Poppins, Arial, sans-serif;
+  font-size: 2.06rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #232323;
+  letter-spacing: 2px;
+  margin: 18px 0 0;
+  line-height: 1.19;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.cards.cards14 .cards-card-body > p:nth-child(2) + h3 {
+  margin-top: 10px;
+}
+
+@media (width <= 900px) {
+  .cards.cards14 > ul {
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .cards.cards14 > ul > li {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
