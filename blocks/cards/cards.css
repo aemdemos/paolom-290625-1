@@ -1,27 +1,77 @@
+.cards {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  padding-top: 7vw;
+}
+
 .cards > ul {
-  list-style: none;
-  margin: 0;
+  /* Grid properties removed in favor of flex to match visible effect */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  margin: 0 auto;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  list-style: none;
+  background: none;
+
+  /* grid-gap replaced by flex gap for modern flex support (optional) */
+  gap: 24px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  border: none;
+  background: none;
+  box-shadow: none;
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+/* Hide all cards except the first */
+.cards > ul > li:not(:first-child) {
+  display: none;
 }
 
 .cards .cards-card-body {
   margin: 16px;
+  display: none;
 }
 
 .cards .cards-card-image {
   line-height: 0;
+  width: 320px;
+  height: 215px;
+  overflow: hidden;
+  transform: rotate(-6deg);
+  background: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .cards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.cards .cards-card-image picture,
+.cards .cards-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: cover;
 }
