@@ -45,3 +45,145 @@
     padding: 40px 32px;
   }
 }
+
+/* ----- GENERATED CSS ----- */
+
+.hero.hero8 > div:nth-child(2) {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 0 200px 32px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 660px;
+}
+
+.hero.hero8 > div:first-child {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero.hero8 > div:first-child > div,
+.hero.hero8 > div:first-child picture,
+.hero.hero8 > div:first-child img {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.hero.hero8 > div:first-child picture,
+.hero.hero8 > div:first-child > div {
+  display: block;
+  height: 100%;
+}
+
+.hero.hero8 > div:first-child img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0;
+}
+
+@media (width <= 900px) {
+  .hero.hero8 > div:nth-child(2) {
+    padding: 0 0 60px 10px;
+    min-height: 340px;
+  }
+}
+
+.hero.hero8 > div:nth-child(2) > div {
+  max-width: 420px;
+  width: 100%;
+}
+
+.hero.hero8 h1 {
+  color: #fff;
+  font-family: Montserrat, Exo, "Roboto Arial"nsed, Arial, sans-serif;
+  font-size: 4.4rem;
+  font-weight: 300;
+  line-height: 1.04;
+  letter-spacing: 0.01em;
+  margin: 0 0 10px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+@media (width <= 900px) {
+  .hero.hero8 h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.hero.hero8 p {
+  color: #fff;
+  font-size: 1.08rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 28em;
+  font-weight: 400;
+}
+
+.hero.hero8 a,
+.hero.hero8 button {
+  display: inline-block;
+  padding: 0.7em 2.2em;
+  border: 2px solid #e6e6e6;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  margin-top: 24px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.hero.hero8 a:hover,
+.hero.hero8 button:hover,
+.hero.hero8 a:focus,
+.hero.hero8 button:focus {
+  background: rgb(255 255 255 / 6%);
+  color: #fff;
+  border-color: #fff;
+}
+
+.hero.hero8 ul,
+.hero.hero8 ol {
+  display: none;
+}
+
+.hero.hero8::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(0 0 0 / 28%) 0%, rgb(0 0 0 / 18%) 60%, rgb(0 0 0 / 4%) 100%);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 24px;
+}
+
+/* ----- MERGED SELECTOR FOR .hero.hero8 ----- */
+
+.hero.hero8 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 660px;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
