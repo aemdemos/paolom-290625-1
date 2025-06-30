@@ -1,3 +1,4 @@
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -43,5 +44,213 @@
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+  }
+}
+
+.hero.hero7 {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0;
+  overflow: hidden;
+  background: none;
+}
+
+/* Collage as background: remove aspect-ratio so images can be rectangular */
+.hero.hero7 > div:first-child {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  pointer-events: none;
+}
+
+/* Collage grid: 3x3, allow natural rectangle shapes */
+.hero.hero7 > div:first-child > div > p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  place-content: stretch stretch;
+  align-items: stretch;
+}
+
+.hero.hero7 > div:first-child > div > p > picture {
+  flex: 0 0 33.3333%;
+  width: 33.3333vw;
+  height: 33.3333vh;
+
+  /* aspect-ratio removed */
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero.hero7 > div:first-child > div > p > picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay: slightly increase opacity for more contrast */
+.hero.hero7 > div:first-child::after {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 41%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Center hero content, push slightly below true center for visual balance */
+.hero.hero7 > div:last-child {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  pointer-events: none;
+  padding-top: 12vh; /* nudges content lower */
+}
+
+/* Content container, max-width reduced and centered */
+.hero.hero7 > div:last-child > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 2vw;
+  box-sizing: border-box;
+}
+
+/* Headline: slightly reduced font-size and line-height */
+.hero.hero7 h1 {
+  color: #fff;
+  font-family: var(--heading-font-family), Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5vw, 4.1rem);
+  line-height: 1.11;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.95em;
+  text-align: center;
+  max-width: 100%;
+  text-shadow: 0 2px 16px rgb(0 0 0 / 21%);
+}
+
+/* Subheading: margin-bottom increased for more space above CTAs */
+.hero.hero7 > div:last-child > div > p:not(:last-child) {
+  color: #e0e0e0;
+  font-size: 1.12rem;
+  font-family: var(--body-font-family), Arial, sans-serif;
+  margin: 0 auto 2.3em;
+  text-align: center;
+  max-width: 620px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 17%);
+}
+
+/* CTA row: larger gap between buttons */
+.hero.hero7 > div:last-child > div > p:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 2.8em;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+/* CTA link styles */
+.hero.hero7 > div:last-child > div > p:last-child > a {
+  display: inline-block;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 2.6em;
+  padding: 0.97em 3.1em;
+  font-size: 1.07rem;
+  font-family: var(--body-font-family), Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero.hero7 > div:last-child > div > p:last-child > a:hover,
+.hero.hero7 > div:last-child > div > p:last-child > a:focus {
+  background: rgb(255 255 255 / 9%);
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Remove default spacing on inner elements for tight stacking */
+.hero.hero7 > div:last-child > div > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Responsive tweaks for mobile/tablet */
+@media (width <= 900px) {
+  .hero.hero7 h1 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .hero.hero7 > div:last-child > div {
+    max-width: 98vw;
+  }
+
+  .hero.hero7 > div:last-child > div > p:not(:last-child) {
+    font-size: 1.01rem;
+    max-width: 97vw;
+  }
+
+  .hero.hero7 > div:last-child > div > p:last-child {
+    gap: 1.3em;
+  }
+
+  .hero.hero7 > div:first-child > div > p > picture {
+    width: 50vw;
+    height: 25vh;
+    flex: 0 0 50vw;
+  }
+}
+
+@media (width <= 600px) {
+  .hero.hero7 > div:last-child {
+    padding-top: 7vw;
+  }
+
+  .hero.hero7 > div:last-child > div {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .hero.hero7 > div:first-child > div > p > picture {
+    width: 100vw;
+    height: 33.33vh;
+    flex: 0 0 100vw;
   }
 }
