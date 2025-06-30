@@ -25,3 +25,32 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards.cards5 {
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+/* Hide all card items, but retain ul for spacing */
+.cards.cards5 > ul {
+  flex: 1 1 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.cards.cards5 > ul > li,
+.cards.cards5 .cards-card-image,
+.cards.cards5 .cards-card-body {
+  display: none;
+}
