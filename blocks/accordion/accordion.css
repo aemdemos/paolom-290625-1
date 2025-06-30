@@ -55,7 +55,115 @@
   padding: 0 16px;
 }
 
+.accordion.accordion12 .accordion-item-body {
+  padding: 0 24px 24px;
+  background: transparent;
+  border: none;
+  color: #20201D;
+  font-size: 18px;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
 .accordion details[open] .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
+}
+
+.accordion.accordion12 {
+  background: #F7F7F3;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.accordion.accordion12 details {
+  border: none;
+  border-bottom: 1px solid #D1D1C9;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.accordion.accordion12 details + details {
+  margin-top: 0;
+}
+
+.accordion.accordion12 details:last-child {
+  border-bottom: none;
+}
+
+/* Row layout and vertical centering */
+.accordion.accordion12 details summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 12px; /* Tighter to right edge for chevron */
+  min-height: 48px;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  color: #20201D;
+  border: none;
+  box-shadow: none;
+  list-style: none;
+  position: relative;
+  transition: none;
+  gap: 0;
+}
+
+.accordion.accordion12 details summary::-webkit-details-marker,
+.accordion.accordion12 details summary::marker {
+  display: none;
+}
+
+/* Text styling and centering */
+.accordion.accordion12 details summary p {
+  margin: 0;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  color: #20201D;
+  flex: 1 1 auto;
+  align-self: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Remove line-height: let flex do the centering */
+}
+
+/* Custom chevron: perfectly centered and flush right */
+.accordion.accordion12 details summary::after {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin-left: 16px;
+  margin-right: 0;
+  background: url('data:image/svg+xml;utf8,<svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 5.5l3.5 3 3.5-3" stroke="%2320201D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+  background-size: 14px 14px;
+  align-self: center;
+  transition: transform 0.2s;
+  pointer-events: none;
+}
+
+.accordion.accordion12 details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.accordion.accordion12 details[open] summary,
+.accordion.accordion12 details summary:focus,
+.accordion.accordion12 details summary:hover {
+  background: transparent;
+}
+
+.accordion.accordion12 details[open] .accordion-item-body {
+  border: none;
+  background: transparent;
 }
