@@ -206,6 +206,121 @@
   border-color: #fff;
 }
 
+.hero.hero17 {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  display: block;
+}
+
+/* Overlay content is vertically centered (fixes "too high" issue) */
+.hero.hero17 > div:nth-child(2) {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  transform: none;
+}
+
+/* Full-bleed background image */
+.hero.hero17 > div:first-child {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero.hero17 > div:first-child > div,
+.hero.hero17 > div:first-child picture,
+.hero.hero17 > div:first-child img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero.hero17 > div:first-child img {
+  object-fit: cover;
+}
+
+/* Overlay for contrast */
+.hero.hero17::after {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 22%) 0%,
+    rgb(0 0 0 / 14%) 60%,
+    rgb(0 0 0 / 7%) 100%
+  );
+}
+
+/* Headline: reduce max width, a bit less gigantic, better line breaks */
+.hero.hero17 h1 {
+  font-family: "Montserrat Alternates", Exo, Orbitron, Arial, sans-serif;
+  font-weight: 300;
+  font-size: clamp(2.3rem, 7vw, 5rem);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.01em;
+  line-height: 1.13;
+  margin: 0 0 2.1rem;
+  max-width: 880px;
+  width: 90vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-variation-settings: 'wght' 300;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Button row: more space between buttons, slightly bigger buttons */
+.hero.hero17 p {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hero.hero17 p a {
+  display: inline-block;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 400;
+  padding: 0.78em 2.25em;
+  text-align: center;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  text-decoration: none;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.hero.hero17 p a:hover,
+.hero.hero17 p a:focus {
+  background: rgb(255 255 255 / 10%);
+}
+
 /* Remove default spacing on inner elements for tight stacking */
 .hero.hero7 > div:last-child > div > * {
   margin-top: 0;
@@ -252,5 +367,25 @@
     width: 100vw;
     height: 33.33vh;
     flex: 0 0 100vw;
+  }
+}
+  
+/* Responsive fine-tuning */
+@media (width <= 700px) {
+  .hero.hero17 h1 {
+    font-size: clamp(1.13rem, 10vw, 2.4rem);
+    margin-bottom: 1rem;
+    max-width: 98vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  .hero.hero17 p {
+    gap: 1.1rem;
+  }
+
+  .hero.hero17 p a {
+    font-size: 0.92rem;
+    padding: 0.54em 1.1em;
   }
 }

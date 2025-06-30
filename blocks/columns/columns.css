@@ -1,3 +1,4 @@
+
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -29,5 +30,167 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+}
+
+.columns.columns15 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 36px;
+  width: 100%;
+  aspect-ratio: 2.4 / 1;
+  max-width: 100%;
+}
+
+.columns.columns15 .columns-img-col {
+  flex: 1 1 0;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+}
+
+.columns.columns15 .columns-img-col picture,
+.columns.columns15 .columns-img-col img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  border-radius: 36px;
+  display: block;
+  object-fit: cover;
+}
+
+@media (width <= 900px) {
+  .columns.columns15 > div {
+    flex-direction: column;
+    gap: 24px;
+    aspect-ratio: unset;
+    height: auto;
+  }
+
+  .columns.columns15 .columns-img-col picture,
+  .columns.columns15 .columns-img-col img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.columns.columns18 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 370px;
+  gap: 5vw;
+  padding: 54px 0;
+  background: #fff;
+}
+
+/* Left column (text) */
+.columns.columns18 > div > div:first-child {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 58vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.columns.columns18 h2 {
+  font-family: Montserrat, 'Arial Rounded MT', Arial, sans-serif;
+  font-size: 2.85rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: #222;
+  margin: 0 0 1.1rem;
+  line-height: 1.08;
+}
+
+.columns.columns18 h2 + p {
+  font-size: 1.18rem;
+  color: #666;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+  line-height: 1.6;
+  max-width: 750px;
+}
+
+/* Right column (buttons) */
+.columns.columns18 > div > div:last-child {
+  flex: 0 0 260px;
+  max-width: 260px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.2em;
+}
+
+.columns.columns18 > div > div:last-child p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Buttons styling */
+.columns.columns18 > div > div:last-child a {
+  display: block;
+  width: 236px;
+  max-width: 100%;
+  padding: 16px 0 13px;
+  border: 2px solid #222;
+  border-radius: 32px;
+  background: #fff;
+  color: #222;
+  font-size: 1.15rem;
+  font-family: inherit;
+  text-align: center;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin: 0;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s, color 0.12s;
+  position: relative;
+  line-height: 1.15;
+}
+
+/* "Sign up" button underline */
+.columns.columns18 > div > div:last-child a:first-child {
+  border-bottom: 2px solid #f4fe9b;
+}
+
+/* Button hover state */
+.columns.columns18 > div > div:last-child a:hover,
+.columns.columns18 > div > div:last-child a:focus {
+  border-color: #1d3ecf;
+  color: #1d3ecf;
+}
+
+/* Responsive styles */
+@media (width <= 900px) {
+  .columns.columns18 > div {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+    gap: 32px;
+    padding: 32px 0;
+  }
+
+  .columns.columns18 > div > div:first-child,
+  .columns.columns18 > div > div:last-child {
+    max-width: 100%;
+    flex: unset;
+    min-width: unset;
+  }
+
+  .columns.columns18 > div > div:last-child a {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 }

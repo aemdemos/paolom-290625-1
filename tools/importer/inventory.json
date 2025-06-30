@@ -252,11 +252,11 @@
       ]
     },
     {
-      "name": "Carousel",
+      "name": "Cards",
       "cluster": 10,
-      "source": "Carousel",
-      "target": "Carousel",
-      "key": "carousel10",
+      "source": "Cards",
+      "target": "Cards",
+      "key": "cards10",
       "instances": [
         {
           "url": "https://wknd-trendsetters.webflow.io/fashion-trends-young-adults-casual-sport",
